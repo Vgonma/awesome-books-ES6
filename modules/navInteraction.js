@@ -1,4 +1,4 @@
-export default function addTransitionToMenu(navList) {
+const addTransitionToMenu = (navList) => {
   navList.forEach((menu) => {
     menu.addEventListener('click', () => {
       navList.forEach((item) => { item.classList.remove('nav-active'); });
@@ -9,4 +9,5 @@ export default function addTransitionToMenu(navList) {
       ].classList.remove('hide');
     });
   });
-}
+};
+export default addTransitionToMenu;

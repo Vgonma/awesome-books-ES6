@@ -1,6 +1,6 @@
 import * as SL from './saveLoad.js';
 
-function addRemoveOnClick(button, collection) {
+const addRemoveOnClick = (button, collection) => {
   button.addEventListener('click', () => {
     const booksContainer = button.parentElement.parentElement;
     const book = button.parentElement;
@@ -8,9 +8,9 @@ function addRemoveOnClick(button, collection) {
     booksContainer.removeChild(book);
     SL.saveLocalStorage('collection', collection.collection);
   });
-}
+};
 
-export default function displayColection(DOMElement, collection) {
+const displayColection = (DOMElement, collection) => {
   if (!DOMElement || !collection) { return; }
   DOMElement.innerHTML = '';
   const { collection: bookList } = collection;
@@ -30,4 +30,6 @@ export default function displayColection(DOMElement, collection) {
   buttonsList.forEach((button) => {
     addRemoveOnClick(button, collection);
   });
-}
+};
+
+export default displayColection;
