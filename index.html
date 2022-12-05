@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ES6 Awesome Books</title>
+  <link rel="stylesheet" href="./index.css">
+  <script type="module" src="./index.js"></script>
+</head>
+<body>
+  <header class="nav-container">
+    <nav class="nav-bar">
+      <h3 class="nav-title">Awesome Books</h3>
+      <ul class="nav-list">
+        <li id="nav-book-list" class="nav-li nav-active">List</li>
+        <li id="nav-add" class="nav-li">Add New</li>
+        <li id="nav-contact" class="nav-li">Contact</li>
+      </ul>
+    </nav>
+  </header>
+  <section class="book-section">
+    <h2>Awesome Books</h2>
+    <div class="book-list">
+    <!-- add books through javascript -->
+      </div>
+  </section>
+  <section class="add-book-section hide">
+    <h2>Add New Books</h2>
+    <form onsubmit="return false;">
+      <input class="title" type="text" placeholder="Title" required>
+      <input class="author" type="text" placeholder="Author" required>
+      <button type="submit" class="add_button"> Add</button>
+    </form>
+  </section>
+  <section class="info_section hide">
+    <h2>Contact Information</h2>
+    <p class="info_p">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nostrum, id!
+      <br> You can reach out to us!
+    </p>
+    <ul class="info_list">
+      <li>Our E-mail: mail@mail.com</li>
+      <li>Our Phone: 123555111</li>
+      <li>Our Address Street 22, 84503 City, Country.</li>
+    </ul>
+  </section>
+  <footer>
+    <p class="copyright">Copyright  ...</p>
+  </footer>
+</body>
+</html>
