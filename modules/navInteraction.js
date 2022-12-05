@@ -1,4 +1,4 @@
-export function addTransitionToMenu (navList) {
+export default function addTransitionToMenu(navList) {
   navList.forEach((menu) => {
     menu.addEventListener('click', () => {
       navList.forEach((item) => { item.classList.remove('nav-active'); });

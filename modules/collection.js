@@ -6,7 +6,6 @@ export default class Collection {
   populateCollection(array) {
     if (!array) { return; }
     this.collection = array;
-
   }
 
   insertBook(book) {
