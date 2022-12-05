@@ -1,4 +1,4 @@
-import * as SL from './saveLoad'
+import * as SL from './saveLoad.js';
 
 function addRemoveOnClick(button, collection){
   button.addEventListener('click', () => {
@@ -6,6 +6,7 @@ function addRemoveOnClick(button, collection){
     const book = button.parentElement;
     collection.removeBook(Array.prototype.indexOf.call(booksContainer.children, book));
     booksContainer.removeChild(book);
+    SL.saveLocalStorage('collection', collection.collection);
   });
 }
 
@@ -22,9 +23,11 @@ export function displayColection(DOM_element, collection) {
     <button class="remove_button">Remove</button>
     `
     DOM_element.appendChild(newBook);
-    SL.saveLocalStorage('collection', bookList);
-
-    const buttonsList = document.querySelectorAll('.remove_button');
-    buttonsList.forEach((button), addRemoveOnClick(button, collection));
   } 
+  SL.saveLocalStorage('collection', bookList);
+
+  const buttonsList = document.querySelectorAll('.remove_button');
+  buttonsList.forEach((button) => {
+    addRemoveOnClick(button, collection)
+  });
 }

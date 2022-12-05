@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "a copy of awesome books but using ES6 syntax and modules.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

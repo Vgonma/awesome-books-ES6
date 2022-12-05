@@ -4,9 +4,9 @@ export function saveLocalStorage(key, object) {
 
 }
 
-export function loadLocalStorage(key, object) {
-  if (!key || !object) { return; }
+export function loadLocalStorage(key) {
+  if (!key) { return; }
   if (JSON.parse(localStorage.getItem(key))) {
-    object = JSON.parse(localStorage.getItem(key));
+    return JSON.parse(localStorage.getItem(key));
   }
 }
